@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1F0B981DB142280074A3B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F0B971DB142280074A3B0 /* DetailViewController.swift */; };
 		3B26F7191DAE593700AA16ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26F7181DAE593700AA16ED /* AppDelegate.swift */; };
 		3B26F71B1DAE593700AA16ED /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26F71A1DAE593700AA16ED /* PlayingViewController.swift */; };
 		3B26F71E1DAE593700AA16ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B26F71C1DAE593700AA16ED /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		308575170AD64FDCD0225B5A /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
+		3B1F0B971DB142280074A3B0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3B26F7151DAE593700AA16ED /* Flicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B26F7181DAE593700AA16ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B26F71A1DAE593700AA16ED /* PlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				3B26F7181DAE593700AA16ED /* AppDelegate.swift */,
 				3B26F71A1DAE593700AA16ED /* PlayingViewController.swift */,
+				3B1F0B971DB142280074A3B0 /* DetailViewController.swift */,
 				3B26F71C1DAE593700AA16ED /* Main.storyboard */,
 				3B26F71F1DAE593700AA16ED /* Assets.xcassets */,
 				3B26F7211DAE593700AA16ED /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 			files = (
 				3B26F71B1DAE593700AA16ED /* PlayingViewController.swift in Sources */,
 				3B26F7191DAE593700AA16ED /* AppDelegate.swift in Sources */,
+				3B1F0B981DB142280074A3B0 /* DetailViewController.swift in Sources */,
 				3B26F72D1DAE5D0D00AA16ED /* MovieCell.swift in Sources */,
 				3B26F72B1DAE5C2B00AA16ED /* Movie.swift in Sources */,
 			);

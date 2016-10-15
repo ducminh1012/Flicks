@@ -62,6 +62,13 @@ class PlayingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! DetailViewController
+        
+        let data = movies[(movieTableView.indexPathForSelectedRow?.row)!]
+        
+        detailVC.data = data
+    }
 
 }
 
