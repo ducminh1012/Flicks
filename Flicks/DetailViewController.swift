@@ -32,6 +32,8 @@ class DetailViewController: UIViewController {
         titleLabel.text = data?.name
         overviewLabel.text = data?.overview
         
+        overviewLabel.frame.size.width = scrollView.bounds.size.width - 20
+        
         overviewLabel.sizeToFit()
         
         

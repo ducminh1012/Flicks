@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PlayingViewController: UIViewController {
 
@@ -23,6 +24,8 @@ class PlayingViewController: UIViewController {
         movieTableView.delegate = self
         movieTableView.dataSource = self
         
+        movieTableView.isHidden = true
+        SVProgressHUD.show()
         
         if let url = url {
             let request = URLRequest(
@@ -40,7 +43,10 @@ class PlayingViewController: UIViewController {
                 completionHandler: { (dataOrNil, response, error) in
                     if let data = dataOrNil {
                         if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                            print("response: \(responseDictionary)")
+//                            print("response: \(responseDictionary)")
+                            self.movieTableView.isHidden = false
+                            SVProgressHUD.dismiss()
+                            
                             if let movieData = responseDictionary["results"] as? [[String: AnyObject]] {
                                 
                                 for movie in movieData {
