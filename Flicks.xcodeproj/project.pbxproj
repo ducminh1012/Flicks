@@ -15,6 +15,7 @@
 		3B26F7231DAE593700AA16ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B26F7211DAE593700AA16ED /* LaunchScreen.storyboard */; };
 		3B26F72B1DAE5C2B00AA16ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26F72A1DAE5C2B00AA16ED /* Movie.swift */; };
 		3B26F72D1DAE5D0D00AA16ED /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26F72C1DAE5D0D00AA16ED /* MovieCell.swift */; };
+		3BFFAFA01DB3812600E72FFE /* TopRatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFFAF9F1DB3812600E72FFE /* TopRatedViewController.swift */; };
 		7C4887A7D4633B7083A434C8 /* Pods_Flicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320C5C0BDA74BD3B5BA86AF /* Pods_Flicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		3B26F7241DAE593700AA16ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B26F72A1DAE5C2B00AA16ED /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Model/Movie.swift; sourceTree = "<group>"; };
 		3B26F72C1DAE5D0D00AA16ED /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCell.swift; path = View/MovieCell.swift; sourceTree = "<group>"; };
+		3BFFAF9F1DB3812600E72FFE /* TopRatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRatedViewController.swift; sourceTree = "<group>"; };
 		6320C5C0BDA74BD3B5BA86AF /* Pods_Flicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CD352F11ACE6D5C85C9215 /* Pods-Flicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 				3B26F7241DAE593700AA16ED /* Info.plist */,
 				3B26F72A1DAE5C2B00AA16ED /* Movie.swift */,
 				3B26F72C1DAE5D0D00AA16ED /* MovieCell.swift */,
+				3BFFAF9F1DB3812600E72FFE /* TopRatedViewController.swift */,
 			);
 			path = Flicks;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				3B1F0B981DB142280074A3B0 /* DetailViewController.swift in Sources */,
 				3B26F72D1DAE5D0D00AA16ED /* MovieCell.swift in Sources */,
 				3B26F72B1DAE5C2B00AA16ED /* Movie.swift in Sources */,
+				3BFFAFA01DB3812600E72FFE /* TopRatedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

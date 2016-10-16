@@ -197,7 +197,7 @@
         <!--Top Rated-->
         <scene sceneID="z2u-uO-v9g">
             <objects>
-                <viewController title="Top Rated" automaticallyAdjustsScrollViewInsets="NO" id="22O-t2-Y7G" customClass="PlayingViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Top Rated" automaticallyAdjustsScrollViewInsets="NO" id="22O-t2-Y7G" customClass="TopRatedViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yba-tT-IZV"/>
                         <viewControllerLayoutGuide type="bottom" id="PDr-Wg-iR5"/>
@@ -210,10 +210,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="137" id="TaG-Rz-iv6" customClass="MovieCell" customModule="Flicks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="137"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TaG-Rz-iv6" id="QGZ-rv-yPw">
-                                            <frame key="frameInset" width="375" height="136"/>
+                                            <frame key="frameInset" width="1000" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0q0-BV-1K8">
