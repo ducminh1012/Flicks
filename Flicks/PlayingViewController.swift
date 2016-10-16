@@ -12,10 +12,15 @@ import SVProgressHUD
 class PlayingViewController: UIViewController {
     
     var movies = [Movie]()
+    var filteredMovies = [Movie]()
+    
+    var isFiltered = false
+    
     let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")
     var refreshControl = UIRefreshControl()
     let errorAlertView = UIAlertController(title: "Error", message: "Check your network connection", preferredStyle: .alert)
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
     
     
@@ -25,6 +30,8 @@ class PlayingViewController: UIViewController {
         
         movieTableView.delegate = self
         movieTableView.dataSource = self
+        
+        searchBar.delegate = self
         
         errorAlertView.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
@@ -86,6 +93,12 @@ class PlayingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! DetailViewController
         
@@ -145,12 +158,57 @@ class PlayingViewController: UIViewController {
 
 extension PlayingViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return isFiltered ? filteredMovies.count : movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let movieCell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
-        movieCell.data = movies[indexPath.row]
+        movieCell.data = isFiltered ? filteredMovies[indexPath.row] : movies[indexPath.row]
         return movieCell
+    }
+}
+
+extension PlayingViewController: UISearchBarDelegate{
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        isFiltered = true
+        
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        guard searchText != "" else {
+            filteredMovies = movies
+            movieTableView.reloadData()
+            
+            return
+        }
+            
+        
+        filteredMovies = movies.filter { (movie) -> Bool in
+            return movie.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        print(filteredMovies.count)
+        
+        movieTableView.reloadData()
+        
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("end edit")
+        
+        searchBar.showsCancelButton = false
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isFiltered = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        
+        movieTableView.reloadData()
     }
 }
