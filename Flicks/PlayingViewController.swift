@@ -166,6 +166,10 @@ extension PlayingViewController: UITableViewDataSource, UITableViewDelegate{
         movieCell.data = isFiltered ? filteredMovies[indexPath.row] : movies[indexPath.row]
         return movieCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension PlayingViewController: UISearchBarDelegate{
